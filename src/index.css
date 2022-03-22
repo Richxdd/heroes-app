@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.heroes {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (max-width: 1280px) {
+  .heroes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1024px) {
+  .heroes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 770px) {
+  .heroes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.heroes2 {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1200px) {
+  .heroes2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.hero {
+  position: relative;
+  width: 300px;
+  height: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.letras {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+.hero-image {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 480px;
+  z-index: -9;
+  border-radius: 5px;
 }
